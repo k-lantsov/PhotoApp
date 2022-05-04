@@ -22,6 +22,11 @@
                   <project path="$PROJECT_DIR$/PhotoAppApiAccountManagement" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/ApiGateway" name="ApiGateway">
+                <projects>
+                  <project path="$PROJECT_DIR$/ApiGateway" />
+                </projects>
+              </build>
             </builds>
           </compositeBuild>
         </compositeConfiguration>
@@ -32,9 +37,19 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ApiGateway" />
             <option value="$PROJECT_DIR$/PhotoAppApiAccountManagement" />
             <option value="$PROJECT_DIR$/PhotoAppApiUsers" />
             <option value="$PROJECT_DIR$/PhotoAppDiscoveryService" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ApiGateway" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ApiGateway" />
           </set>
         </option>
       </GradleProjectSettings>
