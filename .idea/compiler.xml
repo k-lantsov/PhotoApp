@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.6" />
+    <bytecodeTargetLevel target="1.6">
+      <module name="PhotoApp.PhotoAppAccountManagement" target="11" />
+      <module name="PhotoApp.PhotoAppAccountManagement.main" target="11" />
+      <module name="PhotoApp.PhotoAppAccountManagement.test" target="11" />
+      <module name="PhotoAppAccountManagement" target="11" />
+      <module name="PhotoAppAccountManagement.main" target="11" />
+      <module name="PhotoAppAccountManagement.test" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

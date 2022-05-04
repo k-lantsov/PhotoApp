@@ -17,20 +17,39 @@
                   <project path="$PROJECT_DIR$/PhotoAppApiUsers" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/PhotoAppApiAccountManagement" name="PhotoAppApiAccountManagement">
+                <projects>
+                  <project path="$PROJECT_DIR$/PhotoAppApiAccountManagement" />
+                </projects>
+              </build>
             </builds>
           </compositeBuild>
         </compositeConfiguration>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/PhotoAppApiAccountManagement" />
             <option value="$PROJECT_DIR$/PhotoAppApiUsers" />
             <option value="$PROJECT_DIR$/PhotoAppDiscoveryService" />
           </set>
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/PhotoAppApiAccountManagement" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/PhotoAppApiAccountManagement" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/PhotoAppApiUsers" />
         <option name="modules">
@@ -40,6 +59,8 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/PhotoAppDiscoveryService" />
         <option name="modules">

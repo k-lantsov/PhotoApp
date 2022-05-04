@@ -2,4 +2,5 @@ rootProject.name = 'PhotoApp'
 
 includeBuild 'PhotoAppDiscoveryService'
 includeBuild 'PhotoAppApiUsers'
+includeBuild 'PhotoAppApiAccountManagement'
 
