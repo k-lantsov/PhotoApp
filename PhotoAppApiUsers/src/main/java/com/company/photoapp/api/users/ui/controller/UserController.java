@@ -8,6 +8,7 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,14 @@ public class UserController {
     @Value("${eureka.instance.instance-id}")
     private String id;
 
-    private UserService userService;
+    private Environment env;
+
+    @Autowired
+    public void setEnv(Environment env) {
+        this.env = env;
+    }
+
+    private final UserService userService;
 
     @Autowired
     public UserController(UserService userService) {
@@ -31,7 +39,7 @@ public class UserController {
 
     @GetMapping("/status/check")
     public String status() {
-        return id;
+        return id + " with token = " + env.getProperty("token.secret");
     }
 
     @PostMapping(
