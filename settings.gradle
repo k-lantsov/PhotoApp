@@ -4,4 +4,5 @@ includeBuild 'PhotoAppDiscoveryService'
 includeBuild 'PhotoAppApiUsers'
 includeBuild 'PhotoAppApiAccountManagement'
 includeBuild 'ApiGateway'
+includeBuild 'PhotoAppApiConfigServer'
 
