@@ -20,9 +20,6 @@ import javax.validation.Valid;
 @RequestMapping("/users")
 public class UserController {
 
-    @Value("${eureka.instance.instance-id}")
-    private String id;
-
     private Environment env;
 
     @Autowired
@@ -39,7 +36,8 @@ public class UserController {
 
     @GetMapping("/status/check")
     public String status() {
-        return id + " with token = " + env.getProperty("token.secret");
+        return "Working on port " + env.getProperty("local.server.port") +
+                " with token = " + env.getProperty("token.secret");
     }
 
     @PostMapping(
