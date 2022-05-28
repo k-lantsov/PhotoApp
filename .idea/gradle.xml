@@ -32,6 +32,11 @@
                   <project path="$PROJECT_DIR$/PhotoAppApiConfigServer" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/PhotoAppApiAlbums" name="PhotoAppApiAlbums">
+                <projects>
+                  <project path="$PROJECT_DIR$/PhotoAppApiAlbums" />
+                </projects>
+              </build>
             </builds>
           </compositeBuild>
         </compositeConfiguration>
@@ -44,6 +49,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ApiGateway" />
             <option value="$PROJECT_DIR$/PhotoAppApiAccountManagement" />
+            <option value="$PROJECT_DIR$/PhotoAppApiAlbums" />
             <option value="$PROJECT_DIR$/PhotoAppApiConfigServer" />
             <option value="$PROJECT_DIR$/PhotoAppApiUsers" />
             <option value="$PROJECT_DIR$/PhotoAppDiscoveryService" />
@@ -70,10 +76,10 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/PhotoAppApiConfigServer" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/PhotoAppApiAlbums" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/PhotoAppApiConfigServer" />
+            <option value="$PROJECT_DIR$/PhotoAppApiAlbums" />
           </set>
         </option>
       </GradleProjectSettings>
