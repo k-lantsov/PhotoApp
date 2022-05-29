@@ -5,6 +5,6 @@ includeBuild 'PhotoAppApiUsers'
 includeBuild 'PhotoAppApiAccountManagement'
 includeBuild 'ApiGateway'
 includeBuild 'PhotoAppApiConfigServer'
-includeBuild 'PhotoAppApiAlbums'
+
 
 
