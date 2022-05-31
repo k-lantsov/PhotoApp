@@ -22,10 +22,13 @@ import java.util.List;
 @RequestMapping("/users/{id}/albums")
 public class AlbumController {
 
-    @Autowired
     AlbumService albumService;
-
     Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
+    public AlbumController(AlbumService albumService) {
+        this.albumService = albumService;
+    }
 
     @GetMapping(
             produces = {

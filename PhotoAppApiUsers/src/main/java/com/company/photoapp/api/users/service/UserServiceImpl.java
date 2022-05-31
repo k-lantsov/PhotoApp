@@ -1,5 +1,6 @@
 package com.company.photoapp.api.users.service;
 
+import com.company.photoapp.api.users.data.AlbumServiceClient;
 import com.company.photoapp.api.users.data.UserEntity;
 import com.company.photoapp.api.users.data.UserRepository;
 import com.company.photoapp.api.users.shared.UserDto;
@@ -7,16 +8,11 @@ import com.company.photoapp.api.users.ui.model.AlbumResponseModel;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.core.env.Environment;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,22 +23,16 @@ public class UserServiceImpl implements UserService{
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
-    private final RestTemplate restTemplate;
-    private Environment env;
-
-    @Autowired
-    public void setEnv(Environment env) {
-        this.env = env;
-    }
+    private final AlbumServiceClient albumServiceClient;
 
     @Autowired
     public UserServiceImpl(
             UserRepository userRepository,
             BCryptPasswordEncoder bCryptPasswordEncoder,
-            RestTemplate restTemplate) {
+            AlbumServiceClient albumServiceClient) {
         this.userRepository = userRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-        this.restTemplate = restTemplate;
+        this.albumServiceClient = albumServiceClient;
     }
 
     @Override
@@ -73,16 +63,7 @@ public class UserServiceImpl implements UserService{
             throw new UsernameNotFoundException("User not found");
         }
         UserDto userDto = new ModelMapper().map(userEntity, UserDto.class);
-
-        String albumUrl = String.format(env.getProperty("albums.url"), userId);
-        ResponseEntity<List<AlbumResponseModel>> albumsResponse = restTemplate.exchange(
-                albumUrl,
-                HttpMethod.GET,
-                null,
-                new ParameterizedTypeReference<>() {
-                });
-        List<AlbumResponseModel> albums = albumsResponse.getBody();
-
+        List<AlbumResponseModel> albums = albumServiceClient.getAlbums(userId);
         userDto.setAlbums(albums);
         return userDto;
     }
