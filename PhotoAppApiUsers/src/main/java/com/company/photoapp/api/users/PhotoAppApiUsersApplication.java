@@ -1,5 +1,7 @@
 package com.company.photoapp.api.users;
 
+import com.company.photoapp.api.users.shared.FeignErrorDecoder;
+import feign.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -19,5 +21,10 @@ public class PhotoAppApiUsersApplication {
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    Logger.Level feignLoggerLover() {
+        return Logger.Level.FULL;
     }
 }
