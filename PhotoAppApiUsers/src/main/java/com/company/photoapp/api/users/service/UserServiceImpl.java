@@ -7,6 +7,8 @@ import com.company.photoapp.api.users.shared.UserDto;
 import com.company.photoapp.api.users.ui.model.AlbumResponseModel;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -24,6 +26,8 @@ public class UserServiceImpl implements UserService{
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
     private final AlbumServiceClient albumServiceClient;
+
+    Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     public UserServiceImpl(
@@ -63,7 +67,9 @@ public class UserServiceImpl implements UserService{
             throw new UsernameNotFoundException("User not found");
         }
         UserDto userDto = new ModelMapper().map(userEntity, UserDto.class);
+        logger.info("Before calling albums ms");
         List<AlbumResponseModel> albums = albumServiceClient.getAlbums(userId);
+        logger.info("After calling albums ms");
         userDto.setAlbums(albums);
         return userDto;
     }
