@@ -8,7 +8,6 @@ import com.company.photoapp.api.users.ui.model.UserResponseModel;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -22,13 +21,12 @@ import javax.validation.Valid;
 public class UserController {
 
     private Environment env;
+    private final UserService userService;
 
     @Autowired
     public void setEnv(Environment env) {
         this.env = env;
     }
-
-    private final UserService userService;
 
     @Autowired
     public UserController(UserService userService) {
@@ -62,4 +60,5 @@ public class UserController {
         UserResponseModel returnValue = new ModelMapper().map(userDto, UserResponseModel.class);
         return ResponseEntity.status(HttpStatus.OK).body(returnValue);
     }
+
 }

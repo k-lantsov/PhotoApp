@@ -1,63 +1,150 @@
-2022-06-04 14:18:03.249  INFO 7216 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-04 14:23:03.252  INFO 7216 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-04 14:28:03.261  INFO 7216 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-04 14:31:42.630  INFO 7216 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
-2022-06-04 14:31:42.631  INFO 7216 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654342302631, current=DOWN, previous=UP]
-2022-06-04 14:31:42.632  INFO 7216 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:1bc1d619c622c8b3335b2853bcaa012b: registering service...
-2022-06-04 14:31:42.666  INFO 7216 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:1bc1d619c622c8b3335b2853bcaa012b - registration status: 204
-2022-06-04 14:31:42.672  INFO 7216 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2022-06-04 14:31:45.814  INFO 7216 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2022-06-04 14:31:45.821  INFO 7216 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:1bc1d619c622c8b3335b2853bcaa012b - deregister  status: 200
-2022-06-04 14:31:46.481  INFO 7216 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2022-06-04 15:40:31.657  INFO 17813 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 16.0.1 on MacBook-Pro-Konstantin.local with PID 17813 (/Users/k.lantsov/Documents/java/PhotoApp/PhotoAppApiAlbums/build/classes/java/main started by k.lantsov in /Users/k.lantsov/Documents/java/PhotoApp)
-2022-06-04 15:40:31.659  INFO 17813 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-06-04 15:40:32.698  INFO 17813 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f04dbae-9627-360f-aab6-47651332c0e8
-2022-06-04 15:40:32.989  INFO 17813 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2022-06-04 15:40:32.994  INFO 17813 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-04 15:40:32.994  INFO 17813 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
-2022-06-04 15:40:33.104  INFO 17813 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-04 15:40:33.105  INFO 17813 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1389 ms
-2022-06-04 15:40:33.940  INFO 17813 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2022-06-04 15:40:33.998  WARN 17813 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-06-04 15:40:34.003  INFO 17813 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
-2022-06-04 15:40:34.088  INFO 17813 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49853 (http) with context path ''
-2022-06-04 15:40:34.090  INFO 17813 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 49853
-2022-06-04 15:40:34.092  INFO 17813 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2022-06-04 15:40:34.393  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2022-06-04 15:40:34.396  INFO 17813 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-04 15:40:34.544  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2022-06-04 15:40:34.545  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2022-06-04 15:40:34.545  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2022-06-04 15:40:34.545  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2022-06-04 15:40:34.545  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2022-06-04 15:40:34.545  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2022-06-04 15:40:34.545  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2022-06-04 15:40:34.918  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2022-06-04 15:40:34.982  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2022-06-04 15:40:35.042  INFO 17813 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-06-04 15:40:35.191  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654346435190 with initial instances count: 2
-2022-06-04 15:40:35.199  INFO 17813 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
-2022-06-04 15:40:35.200  INFO 17813 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654346435200, current=UP, previous=STARTING]
-2022-06-04 15:40:35.200  INFO 17813 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:bcffa6e445fba4dea16000ccccc74153: registering service...
-2022-06-04 15:40:35.232  INFO 17813 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 4.034 seconds (JVM running for 4.968)
-2022-06-04 15:40:35.278  INFO 17813 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:bcffa6e445fba4dea16000ccccc74153 - registration status: 204
-2022-06-04 15:40:35.417  INFO 17813 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-04 15:40:35.418  INFO 17813 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-04 15:40:35.419  INFO 17813 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-06-04 15:45:34.566  INFO 17813 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-04 15:46:01.976  INFO 17813 --- [http-nio-auto-1-exec-1] c.c.p.a.a.io.controller.AlbumController  : Returning 2 albums
-2022-06-04 15:49:32.006  INFO 17813 --- [http-nio-auto-1-exec-3] c.c.p.a.a.io.controller.AlbumController  : Returning 2 albums
-2022-06-04 15:49:33.832  INFO 17813 --- [http-nio-auto-1-exec-4] c.c.p.a.a.io.controller.AlbumController  : Returning 2 albums
-2022-06-04 15:50:34.573  INFO 17813 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-04 15:55:34.558  INFO 17813 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-04 16:00:34.561  INFO 17813 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-04 16:06:53.095  INFO 17813 --- [http-nio-auto-1-exec-3] c.c.p.a.a.io.controller.AlbumController  : Returning 2 albums
-2022-06-04 16:06:55.437  INFO 17813 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-04 16:09:39.874  INFO 17813 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
-2022-06-04 16:09:39.874  INFO 17813 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654348179874, current=DOWN, previous=UP]
-2022-06-04 16:09:39.874  INFO 17813 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:bcffa6e445fba4dea16000ccccc74153: registering service...
-2022-06-04 16:09:39.904  INFO 17813 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:bcffa6e445fba4dea16000ccccc74153 - registration status: 204
-2022-06-04 16:09:39.910  INFO 17813 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2022-06-04 16:09:43.079  INFO 17813 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2022-06-04 16:09:43.084  INFO 17813 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:bcffa6e445fba4dea16000ccccc74153 - deregister  status: 200
-2022-06-04 16:09:43.976  INFO 17813 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-05 17:59:29.728  INFO 9745 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 16.0.1 on MacBook-Pro-Konstantin.local with PID 9745 (/Users/k.lantsov/Documents/java/PhotoApp/PhotoAppApiAlbums/build/classes/java/main started by k.lantsov in /Users/k.lantsov/Documents/java/PhotoApp)
+2022-06-05 17:59:29.730  INFO 9745 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-05 17:59:30.740  INFO 9745 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f04dbae-9627-360f-aab6-47651332c0e8
+2022-06-05 17:59:31.017  INFO 9745 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-06-05 17:59:31.022  INFO 9745 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-05 17:59:31.023  INFO 9745 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-05 17:59:31.133  INFO 9745 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-05 17:59:31.133  INFO 9745 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1358 ms
+2022-06-05 17:59:31.895  INFO 9745 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-05 17:59:31.958  WARN 9745 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-05 17:59:31.963  INFO 9745 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-05 17:59:32.053  INFO 9745 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55368 (http) with context path ''
+2022-06-05 17:59:32.056  INFO 9745 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 55368
+2022-06-05 17:59:32.061  INFO 9745 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-05 17:59:32.229  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-05 17:59:32.232  INFO 9745 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-05 17:59:32.319  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-05 17:59:32.322  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-05 17:59:32.322  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-05 17:59:32.322  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-05 17:59:32.322  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-05 17:59:32.322  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-05 17:59:32.322  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-05 17:59:32.709  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-05 17:59:32.753  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-05 17:59:32.789  INFO 9745 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-05 17:59:32.877  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654441172876 with initial instances count: 0
+2022-06-05 17:59:32.886  INFO 9745 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2022-06-05 17:59:32.887  INFO 9745 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654441172887, current=UP, previous=STARTING]
+2022-06-05 17:59:32.888  INFO 9745 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3c22626c5b27b499d7557f48be01ec1f: registering service...
+2022-06-05 17:59:32.925  INFO 9745 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 3.638 seconds (JVM running for 4.279)
+2022-06-05 17:59:32.987  INFO 9745 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3c22626c5b27b499d7557f48be01ec1f - registration status: 204
+2022-06-05 17:59:33.501  INFO 9745 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-05 17:59:33.502  INFO 9745 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-05 17:59:33.504  INFO 9745 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-06-05 18:00:02.754  INFO 9745 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-05 18:00:02.755  INFO 9745 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-05 18:00:02.756  INFO 9745 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-05 18:00:02.756  INFO 9745 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-05 18:00:02.756  INFO 9745 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-05 18:00:02.756  INFO 9745 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-05 18:00:02.756  INFO 9745 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-05 18:00:02.769  INFO 9745 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-05 18:01:03.449  INFO 9745 --- [http-nio-auto-1-exec-1] c.c.p.a.a.io.controller.AlbumController  : Returning 2 albums
+2022-06-05 18:04:32.341  INFO 9745 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-05 18:05:32.541  INFO 9745 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
+2022-06-05 18:05:32.542  INFO 9745 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654441532542, current=DOWN, previous=UP]
+2022-06-05 18:05:32.543  INFO 9745 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3c22626c5b27b499d7557f48be01ec1f: registering service...
+2022-06-05 18:05:32.553  INFO 9745 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3c22626c5b27b499d7557f48be01ec1f - registration status: 204
+2022-06-05 18:05:32.567  INFO 9745 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-05 18:05:35.575  WARN 9745 --- [DiscoveryClient-1] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2022-06-05 18:05:35.688  INFO 9745 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-05 18:05:35.696  INFO 9745 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3c22626c5b27b499d7557f48be01ec1f - deregister  status: 200
+2022-06-05 18:05:36.179  INFO 9745 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-05 18:08:45.131  INFO 11554 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 16.0.1 on MacBook-Pro-Konstantin.local with PID 11554 (/Users/k.lantsov/Documents/java/PhotoApp/PhotoAppApiAlbums/build/classes/java/main started by k.lantsov in /Users/k.lantsov/Documents/java/PhotoApp)
+2022-06-05 18:08:45.133  INFO 11554 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-05 18:08:46.136  INFO 11554 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f04dbae-9627-360f-aab6-47651332c0e8
+2022-06-05 18:08:46.412  INFO 11554 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-06-05 18:08:46.418  INFO 11554 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-05 18:08:46.418  INFO 11554 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-05 18:08:46.520  INFO 11554 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-05 18:08:46.520  INFO 11554 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1330 ms
+2022-06-05 18:08:47.282  INFO 11554 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-05 18:08:47.344  WARN 11554 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-05 18:08:47.349  INFO 11554 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-05 18:08:47.443  INFO 11554 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55482 (http) with context path ''
+2022-06-05 18:08:47.445  INFO 11554 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 55482
+2022-06-05 18:08:47.449  INFO 11554 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-05 18:08:47.662  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-05 18:08:47.665  INFO 11554 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-05 18:08:47.779  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-05 18:08:47.782  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-05 18:08:47.782  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-05 18:08:47.782  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-05 18:08:47.782  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-05 18:08:47.782  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-05 18:08:47.782  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-05 18:08:48.166  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-05 18:08:48.223  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-05 18:08:48.269  INFO 11554 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-05 18:08:48.392  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654441728391 with initial instances count: 0
+2022-06-05 18:08:48.400  INFO 11554 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2022-06-05 18:08:48.401  INFO 11554 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654441728401, current=UP, previous=STARTING]
+2022-06-05 18:08:48.402  INFO 11554 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:f1883f4a2c023740efc125017d105537: registering service...
+2022-06-05 18:08:48.442  INFO 11554 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 3.743 seconds (JVM running for 4.33)
+2022-06-05 18:08:48.498  INFO 11554 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:f1883f4a2c023740efc125017d105537 - registration status: 204
+2022-06-05 18:08:48.954  INFO 11554 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-05 18:08:48.955  INFO 11554 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-05 18:08:48.957  INFO 11554 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-05 18:09:18.229  INFO 11554 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-05 18:09:18.229  INFO 11554 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-05 18:09:18.229  INFO 11554 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-05 18:09:18.230  INFO 11554 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-05 18:09:18.230  INFO 11554 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-05 18:09:18.230  INFO 11554 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-05 18:09:18.230  INFO 11554 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-05 18:09:18.255  INFO 11554 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-05 18:10:19.335  INFO 11554 --- [http-nio-auto-1-exec-1] c.c.p.a.a.io.controller.AlbumController  : Returning 2 albums
+2022-06-05 18:12:45.259  INFO 11554 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
+2022-06-05 18:12:45.261  INFO 11554 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654441965261, current=DOWN, previous=UP]
+2022-06-05 18:12:45.262  INFO 11554 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:f1883f4a2c023740efc125017d105537: registering service...
+2022-06-05 18:12:45.273  INFO 11554 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:f1883f4a2c023740efc125017d105537 - registration status: 204
+2022-06-05 18:12:45.287  INFO 11554 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-05 18:12:48.396  INFO 11554 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-05 18:12:48.402  INFO 11554 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:f1883f4a2c023740efc125017d105537 - deregister  status: 200
+2022-06-05 18:12:49.043  INFO 11554 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-05 18:15:47.274  INFO 12908 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 16.0.1 on MacBook-Pro-Konstantin.local with PID 12908 (/Users/k.lantsov/Documents/java/PhotoApp/PhotoAppApiAlbums/build/classes/java/main started by k.lantsov in /Users/k.lantsov/Documents/java/PhotoApp)
+2022-06-05 18:15:47.277  INFO 12908 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-05 18:15:48.385  INFO 12908 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f04dbae-9627-360f-aab6-47651332c0e8
+2022-06-05 18:15:48.668  INFO 12908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-06-05 18:15:48.674  INFO 12908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-05 18:15:48.675  INFO 12908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-05 18:15:48.793  INFO 12908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-05 18:15:48.793  INFO 12908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1469 ms
+2022-06-05 18:15:49.575  INFO 12908 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-05 18:15:49.632  WARN 12908 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-05 18:15:49.636  INFO 12908 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-05 18:15:49.729  INFO 12908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55566 (http) with context path ''
+2022-06-05 18:15:49.730  INFO 12908 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 55566
+2022-06-05 18:15:49.734  INFO 12908 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-05 18:15:49.950  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-05 18:15:49.953  INFO 12908 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-05 18:15:50.070  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-05 18:15:50.071  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-05 18:15:50.071  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-05 18:15:50.071  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-05 18:15:50.071  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-05 18:15:50.071  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-05 18:15:50.071  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-05 18:15:50.407  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-05 18:15:50.459  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-05 18:15:50.509  INFO 12908 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-05 18:15:50.626  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654442150625 with initial instances count: 2
+2022-06-05 18:15:50.634  INFO 12908 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2022-06-05 18:15:50.635  INFO 12908 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654442150635, current=UP, previous=STARTING]
+2022-06-05 18:15:50.636  INFO 12908 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:ff0b7f6c84abedb995f74b7727070f8a: registering service...
+2022-06-05 18:15:50.673  INFO 12908 --- [main] c.c.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 3.905 seconds (JVM running for 4.777)
+2022-06-05 18:15:50.705  INFO 12908 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:ff0b7f6c84abedb995f74b7727070f8a - registration status: 204
+2022-06-05 18:15:50.783  INFO 12908 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-05 18:15:50.784  INFO 12908 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-05 18:15:50.787  INFO 12908 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-06-05 18:16:38.827  INFO 12908 --- [http-nio-auto-1-exec-1] c.c.p.a.a.io.controller.AlbumController  : Returning 2 albums
+2022-06-05 18:20:08.763  INFO 12908 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
+2022-06-05 18:20:08.765  INFO 12908 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654442408765, current=DOWN, previous=UP]
+2022-06-05 18:20:08.769  INFO 12908 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:ff0b7f6c84abedb995f74b7727070f8a: registering service...
+2022-06-05 18:20:08.777  INFO 12908 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:ff0b7f6c84abedb995f74b7727070f8a - registration status: 204
+2022-06-05 18:20:08.797  INFO 12908 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-05 18:20:11.939  INFO 12908 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-05 18:20:11.944  INFO 12908 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:ff0b7f6c84abedb995f74b7727070f8a - deregister  status: 200
+2022-06-05 18:20:12.600  INFO 12908 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
